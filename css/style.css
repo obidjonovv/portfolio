@@ -9,11 +9,82 @@
 }
 /* body{ */
 /* } */
+/* .nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: white;
+    padding: 12px 20px;
+}
+.logo img {width: 40px;}
+.menu {display: flex;}
+.menu li {padding-left: 30px;}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color1);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+#check {display: none;}
+@media(max-width: 610px){
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--color2);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+} */
+
+
 .hero{
     position: relative;
 
     height: 100vh;
-    width: 100%;
+    max-width: 100%;
     background-color: white;
 }
 nav{
@@ -24,16 +95,16 @@ nav{
     padding-left: 2%;
 }
 .logo{
-    /* color: #262728; */
+    color: #262728; 
     color: white;
     text-shadow: 0 0 5px #fff,
     0 0 10px #fff, 0 0 15px #00bf9f,
     0 0 20px #00bf9f, 0 0 25px #00bf9f,
     0 0 30px #00bf9f, 0 0 35px #00bf9f;
-    /* font-size: 25px;
+     font-size: 25px; 
     letter-spacing: 1px;
-    cursor: pointer; */
-}
+    cursor: pointer; 
+ }
 nav ul{
     flex: 1;
     text-align: right;
@@ -68,9 +139,9 @@ nav ul li a:hover{
     transition: .3s;
 }
 header{
-    width: 92%;
+    max-width: 92%;
     margin: 0 auto;
-    padding: 7px 0;
+    padding: 7px 0;   
     position: absolute;
     top: 40px;
     left: 30px;
@@ -81,7 +152,7 @@ header{
     box-shadow: 0 0 30px rgb(0 0 0 / 10%);
 }
 .bg img{
-    width: 75%;
+    max-width: 75%;
     height: 100%;
 }
 .bg{
@@ -140,7 +211,7 @@ button:hover{
     color: #00bf9f;
     cursor: pointer
 }
-/* .social{
+.social{
     position: absolute;
     right: 70px;
     bottom: 30px;
@@ -157,24 +228,26 @@ button:hover{
 }
 .social ul li a:hover{
     transform: scale(1.2) translateY(-5px);
-} */
+}
 .about{
     height: 100vh;
-    width: 100%;
+    max-width: 100%;
     padding: 100px 0px;
-    background-color: black;
+    background-color: red;
 }
 .about img{
     height: 80vh;
-    width: 40%;
+    max-width: 40%;
+    margin-top: -40px;
 }
 .about-text{
-    width: 550px;
+    max-width: 550px;
     /* color: white; */
 }
 .main{
-    width: 1130px;
+    /* max-width: 1130px; */
     max-width: 95%;
+    margin-top: -150px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -184,7 +257,7 @@ button:hover{
     color: white;
     font-size: 55px;
     text-transform: capitalize;
-    margin-bottom: 20px;
+    margin-top: -120px;
 }
 .about-text h5{
     color: white;
@@ -216,26 +289,28 @@ button:hover{
 }
 .service{
     background-color: black;
-    width: 100%;
-    height: 50%;
+    max-width: 100%;
+    height: 110vh;
     padding: 100px 0px;
 }
 .title{
     color: white;
     font-size: 35px;
-    width: 1130px;
+    max-width: 1130px;
     margin: 30px auto;
+    margin-top: -58px;
     text-align: center;
 }
 .box{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 400px;
+    max-height: 400px;
+    /* margin-top: 120px; */
 }
 .card{
     height: 365px;
-    width: 335px;
+    max-width: 335px;
     padding: 20px 35px;
     background-color: #262728;
     border-radius: 20px;
@@ -281,7 +356,7 @@ button:hover{
 }
 footer{
     position: relative;
-    width: 100%;
+    max-width: 100%;
     height: 200px;
     background-color: #262728;
     display: flex;
@@ -293,12 +368,12 @@ footer{
     color: #00bf9f;
      font-size: 30px; 
     font-weight: bold; 
-    margin-top: 20px;
+    /* margin-top: -5px; */
 }
 .f_text{
     color: white;
      font-size: 17px;
-    width: 45%;
+    width: 48%;
     text-align: center;
 }
 
@@ -364,3 +439,308 @@ footer{
     transform: translateX(-100%);
     transition-delay: .3s;
 } 
+
+@media(max-width: 1200px) {
+    header{
+        width: 90%;
+        padding: 5px;
+        top: 30px;
+    }
+    .logo{
+        font-size: 20px;
+    }
+    nav ul li{
+        padding: 0 10px;
+    }
+    .btn{
+        padding: 10px 20px;
+        
+    }
+    .content{
+        left: 38%;
+    }
+    .content h1{
+        font-size: 55px;
+        line-height: 60px;
+        margin-bottom: 30px;
+    }
+    .content h3{
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .content button{
+        padding: 8px 30px;
+        font-size: 14px;
+    }
+
+    .main{
+        margin-top: 40px;
+    }
+    .about img{
+        height: 70vh;
+        width: 38%;
+        margin-top: -50px;
+    }
+    .about-text{
+        width: 500px;
+        margin-right: 80px;
+    }
+    .about-text h2{
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+    .about-text h5{
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    .about-text p{
+        font-size: 14px;
+        line-height: 26px;
+    }
+    .about-text button{
+        padding: 8px 28px;
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    .card{
+       width: 320px;
+    }
+    .card i{
+        font-size: 45px;
+    }
+    .title{
+        font-size: 30px;
+    }
+    .card h5{
+        font-size: 20px;
+    }
+    .card .button{
+        font-size: 14px;
+        padding: 8px 30px;
+    }
+    .f_text{
+        width: 40%;
+    }
+    .social{
+        width: 100px;
+        height: 40px ;
+        margin-top: 15px;
+    }
+    .social span{
+        display: flex;
+        width: 100px;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+
+    }
+    .social span i{
+        font-size: 13px;
+        align-items: center;
+        padding-right: 3px;
+
+    }
+};
+
+@media(max-width: 796px) {
+    header{
+        width: 70%;
+        padding: 5px;
+        top: 30px;
+    }
+    .logo{
+        font-size: 20px;
+    }
+    nav ul li{
+        padding: 0 10px;
+    }
+    .btn{
+        padding: 10px 20px;
+        
+    }
+    .content{
+        left: 38%;
+    }
+    .content h1{
+        font-size: 55px;
+        line-height: 60px;
+        margin-bottom: 30px;
+    }
+    .content h3{
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .content button{
+        padding: 8px 30px;
+        font-size: 14px;
+    }
+
+    .main{
+        margin-top: 40px;
+    }
+    .about img{
+        height: 70vh;
+        width: 38%;
+        margin-top: -50px;
+    }
+    .about-text{
+        width: 500px;
+        margin-right: 80px;
+    }
+    .about-text h2{
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+    .about-text h5{
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    .about-text p{
+        font-size: 14px;
+        line-height: 26px;
+    }
+    .about-text button{
+        padding: 8px 28px;
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    .card{
+       width: 320px;
+    }
+    .card i{
+        font-size: 45px;
+    }
+    .title{
+        font-size: 30px;
+    }
+    .card h5{
+        font-size: 20px;
+    }
+    .card .button{
+        font-size: 14px;
+        padding: 8px 30px;
+    }
+    .f_text{
+        width: 40%;
+    }
+    .social{
+        width: 100px;
+        height: 40px ;
+        margin-top: 15px;
+    }
+    .social span{
+        display: flex;
+        width: 100px;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+
+    }
+    .social span i{
+        font-size: 13px;
+        align-items: center;
+        padding-right: 3px;
+
+    }
+    @media(min-width: 600px) {
+        header{
+            width: 70%;
+            padding: 5px;
+            top: 30px;
+        }
+        .logo{
+            font-size: 20px;
+        }
+        nav ul li{
+            padding: 0 10px;
+        }
+        .btn{
+            padding: 10px 20px;
+            
+        }
+        .content{
+            left: 38%;
+        }
+        .content h1{
+            font-size: 55px;
+            line-height: 60px;
+            margin-bottom: 30px;
+        }
+        .content h3{
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .content button{
+            padding: 8px 30px;
+            font-size: 14px;
+        }
+    
+        .main{
+            margin-top: 40px;
+        }
+        .about img{
+            height: 70vh;
+            width: 38%;
+            margin-top: -50px;
+        }
+        .about-text{
+            width: 500px;
+            margin-right: 80px;
+        }
+        .about-text h2{
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+        .about-text h5{
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .about-text p{
+            font-size: 14px;
+            line-height: 26px;
+        }
+        .about-text button{
+            padding: 8px 28px;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        .card{
+           width: 320px;
+        }
+        .card i{
+            font-size: 45px;
+        }
+        .title{
+            font-size: 30px;
+        }
+        .card h5{
+            font-size: 20px;
+        }
+        .card .button{
+            font-size: 14px;
+            padding: 8px 30px;
+        }
+        .f_text{
+            width: 40%;
+        }
+        .social{
+            width: 100px;
+            height: 40px ;
+            margin-top: 15px;
+        }
+        .social span{
+            display: flex;
+            width: 100px;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+    
+        }
+        .social span i{
+            font-size: 13px;
+            align-items: center;
+            padding-right: 3px;
+    
+        }
+}
+}
