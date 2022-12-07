@@ -151,17 +151,22 @@ header{
     background-color: white;
     box-shadow: 0 0 30px rgb(0 0 0 / 10%);
 }
+
 .bg img{
-    max-width: 75%;
-    height: 100%;
+    margin-top: 100px;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+    
 }
 .bg{
     position: absolute;
     top: 0;
     left: 0;
-    width: 45%;
+    width: 35%;
     height: 100%;
-    overflow: hidden;
+    background-color: black;
 
 }
 .content{
@@ -213,8 +218,8 @@ button:hover{
 }
 .social{
     position: absolute;
-    right: 70px;
-    bottom: 30px;
+    margin: 0 auto;
+    
 }
 .social ul li{
     text-align: center;
@@ -233,21 +238,24 @@ button:hover{
     height: 100vh;
     max-width: 100%;
     padding: 100px 0px;
-    background-color: red;
+    background-color: black;
 }
 .about img{
     height: 80vh;
-    max-width: 40%;
-    margin-top: -40px;
+    width: 35%;
+    object-fit: contain;
+    object-position: center;
+    
 }
 .about-text{
     max-width: 550px;
+    margin: 0 auto;
     /* color: white; */
 }
 .main{
     /* max-width: 1130px; */
     max-width: 95%;
-    margin-top: -150px;
+   
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -257,7 +265,7 @@ button:hover{
     color: white;
     font-size: 55px;
     text-transform: capitalize;
-    margin-top: -120px;
+    
 }
 .about-text h5{
     color: white;
@@ -290,7 +298,7 @@ button:hover{
 .service{
     background-color: black;
     max-width: 100%;
-    height: 110vh;
+    height: 90vh;
     padding: 100px 0px;
 }
 .title{
@@ -303,6 +311,7 @@ button:hover{
 }
 .box{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     max-height: 400px;
@@ -311,7 +320,7 @@ button:hover{
 .card{
     height: 365px;
     max-width: 335px;
-    padding: 20px 35px;
+    padding: 20px ;
     background-color: #262728;
     border-radius: 20px;
     margin: 15px;
@@ -357,16 +366,22 @@ button:hover{
 footer{
     position: relative;
     max-width: 100%;
-    height: 200px;
+    height: 300px;
     background-color: #262728;
     display: flex;
     flex-direction: column;
     align-items: center;
     /* justify-content: center; */
 }
+.footer_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 45px;
+}
 .f_title{
     color: #00bf9f;
-     font-size: 30px; 
+     font-size: 40px; 
     font-weight: bold; 
     /* margin-top: -5px; */
 }
@@ -413,7 +428,6 @@ footer{
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    position: 0;
     margin-top: 20px;
     overflow: hidden;
     cursor: pointer;
@@ -540,35 +554,59 @@ footer{
         padding-right: 3px;
 
     }
-};
+}
 
-@media(max-width: 796px) {
+@media(max-width: 395px) {
+    .hero{
+        height: 80vh;
+       
+       
+    }
     header{
-        width: 70%;
+        width: 100%;
         padding: 5px;
         top: 30px;
     }
     .logo{
-        font-size: 20px;
+        font-size: 15px;
     }
     nav ul li{
         padding: 0 10px;
+        display: none;
     }
     .btn{
-        padding: 10px 20px;
+        padding: 8px 18px;
+        
+    }
+    .section{
+        display: flex;
+        flex-direction: column;
+    }
+    .bg{
+        width: 30%;
+        flex-direction: column;
+    }
+    .bg img{
+        width: 25%;
+        height: 60%;
+        object-fit: cover;
         
     }
     .content{
         left: 38%;
+        width: 350px;
     }
     .content h1{
-        font-size: 55px;
-        line-height: 60px;
-        margin-bottom: 30px;
+        font-size: 45px;
+        line-height: 46px;
+        margin-bottom: 0px;
     }
     .content h3{
-        font-size: 22px;
+        font-size: 20px;
         margin-bottom: 10px;
+    }
+    .content p{
+      line-height: 15px;
     }
     .content button{
         padding: 8px 30px;
@@ -576,10 +614,10 @@ footer{
     }
 
     .main{
-        margin-top: 40px;
+        margin-top: 24px;
     }
     .about img{
-        height: 70vh;
+        height: 50vh;
         width: 38%;
         margin-top: -50px;
     }
@@ -644,7 +682,7 @@ footer{
     }
     @media(min-width: 600px) {
         header{
-            width: 70%;
+            width: 30%;
             padding: 5px;
             top: 30px;
         }
